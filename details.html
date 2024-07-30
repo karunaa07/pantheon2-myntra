@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <div class="details-page">
+        <div class="cloth-details">
+            <h1>Cloth Details</h1>
+            <p id="description">Description of the cloth item goes here.</p>
+        </div>
+        <div class="buttons">
+            <button onclick="window.history.back()">Back</button>
+            <button onclick="alert('Virtual Try On not implemented')">Virtual Try On</button>
+            <button onclick="alert('Pre-Order not implemented')">Pre-Order</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the cloth parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const clothId = urlParams.get('cloth');
+        const description = document.getElementById('description');
+
+        // Set cloth-specific description based on URL parameter
+        switch (clothId) {
+            case '1':
+                description.textContent = 'Details for Clothes 1';
+                break;
+            case '2':
+                description.textContent = 'Details for Clothes 2';
+                break;
+            case '3':
+                description.textContent = 'Details for Clothes 3';
+                break;
+            case '4':
+                description.textContent = 'Details for Clothes 4';
+                break;
+            case '5':
+                description.textContent = 'Details for Clothes 5';
+                break;
+            default:
+                description.textContent = 'Cloth not found';
+                break;
+        }
+    </script>
+</body>
+</html>

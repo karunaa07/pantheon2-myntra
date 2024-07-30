@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: url('empty-runway-37879638.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.project-page {
+    width: 700px;
+    height: 700px;
+    position: relative;
+}
+
+.closet-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    top: 50%;
+    right: 18%;
+    transform: translateY(-50%) rotateX(-10deg);
+}
+
+.clothes {
+    position: absolute;
+    width: 200px; /* Increased width */
+    height: 150px; /* Increased height */
+    background-size: contain;
+    background-repeat: no-repeat; /* Added to prevent repetition */
+    border: none;
+    border-radius: none;
+    backface-visibility: hidden;
+    transition: transform 2s linear; /* Reduced transition duration */
+}
+
+#clothes1 {
+    transform: rotateY(0deg) translateZ(150px); /* Adjusted translateZ */
+    background-image: url('sunglass1.png'); /* Update with actual path */
+}
+
+#clothes2 {
+    transform: rotateY(72deg) translateZ(150px); /* Adjusted translateZ */
+    background-image: url('tshirt1.png'); /* Update with actual path */
+}
+
+#clothes3 {
+    transform: rotateY(144deg) translateZ(150px); /* Adjusted translateZ */
+    background-image: url('necklace1.png'); /* Update with actual path */
+}
+
+#clothes4 {
+    transform: rotateY(216deg) translateZ(150px); /* Adjusted translateZ */
+    background-image: url('short.png'); /* Update with actual path */
+}
+
+#clothes5 {
+    transform: rotateY(288deg) translateZ(150px); /* Adjusted translateZ */
+    background-image: url('frock1.png'); /* Update with actual path */
+}
